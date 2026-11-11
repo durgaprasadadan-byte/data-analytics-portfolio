@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Secrets and local configuration (never commit these)
+.streamlit/secrets.toml
+.env
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Large or regenerated artefacts (data/sample is kept)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
