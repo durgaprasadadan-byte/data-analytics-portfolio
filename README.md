@@ -15,9 +15,10 @@ streamlit run app.py
 
 ## Configure your details
 
-Copy `.streamlit/secrets.toml.example` to `.streamlit/secrets.toml` and fill in your name,
-GitHub, LinkedIn, email, summary and education. Environment variables with the same names
-also work. Anything missing shows a placeholder and a warning on the page.
+The profile defaults in `settings.py` are prefilled with the portfolio owner's name,
+contact details, summary, work experience and education. Update them there, or override
+them with environment variables or Streamlit secrets. Add the actual GitHub and LinkedIn
+profile URLs in those settings; unset links remain placeholders and trigger a warning.
 
 For a resume download, put the file at `assets/resume.pdf` (or set `RESUME_PATH`). It is
 served from the repository, so only commit a version you are happy to publish.

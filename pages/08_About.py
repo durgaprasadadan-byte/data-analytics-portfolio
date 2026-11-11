@@ -12,11 +12,14 @@ ui.render_placeholder_notice(cfg)
 st.subheader("Professional background")
 st.write(cfg.about_summary)
 
+st.subheader("Experience")
+st.markdown(cfg.experience)
+
 st.subheader("Technical expertise")
 ui.render_tool_grid()
 
 st.subheader("Education")
-st.write(cfg.education)
+st.markdown(cfg.education)
 
 st.subheader("Resume")
 ui.render_resume_button(cfg, key="about_resume")

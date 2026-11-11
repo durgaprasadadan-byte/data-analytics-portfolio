@@ -54,7 +54,12 @@ def test_settings_default_to_placeholders(monkeypatch):
         monkeypatch.delenv(key, raising=False)
     settings.get_config.cache_clear()
     cfg = settings.get_config()
-    assert set(cfg.placeholders) == set(settings.DEFAULTS)
+    assert set(cfg.placeholders) == {"GITHUB_URL", "LINKEDIN_URL"}
+    assert cfg.name == "Durga Prasad Jinna"
+    assert cfg.role == "Software Developer"
+    assert cfg.email == "durga.jinna@lindsey.edu"
+    assert "Infosys" in cfg.experience and "PNC" in cfg.experience
+    assert "Lindsey Wilson University" in cfg.education
     assert not cfg.is_configured
 
 
